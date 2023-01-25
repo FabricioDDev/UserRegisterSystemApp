@@ -52,12 +52,30 @@ namespace DataModel
                 data.Parameters("@UserName", user.userNameProp);
                 data.Parameters("@Password", user.passwordProp);
                 data.Parameters("@ImagenPerfil", user.ImageProfile);
-                data.Parameters("@Rol", user.RoleType.Id);
+                data.Parameters("@IdRol", user.RoleType.Id);
                 data.Execute();
             }
             catch(Exception ex) { throw ex; }
             finally { data.Close(); }
+        }
 
+        public void UpdateUser(User user)
+        {
+            try
+            {
+                data.SP("UpdateUser");
+                data.Parameters("@Email", user.emailProp);
+                data.Parameters("@UserName", user.userNameProp);
+                data.Parameters("@Password", user.passwordProp);
+                data.Parameters("@ImagenPerfil", user.ImageProfile);
+                data.Parameters("@IdRole", user.RoleType.Id);
+                data.Execute();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
         }
     }
 }
