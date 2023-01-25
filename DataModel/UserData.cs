@@ -43,7 +43,7 @@ namespace DataModel
             finally { data.Close(); }
         }
 
-        public void InsertUser(User user)
+        public void insertUser(User user)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace DataModel
             finally { data.Close(); }
         }
 
-        public void UpdateUser(User user)
+        public void updateUser(User user)
         {
             try
             {
@@ -72,6 +72,22 @@ namespace DataModel
                 data.Execute();
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
+
+        public void recoveryUserPass(string newPass, string Email)
+        {
+            try
+            {
+                data.SP("RecoveryUserPass");
+                data.Parameters("@Password", newPass);
+                data.Parameters("@Email", Email);
+                data.Execute();
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }
