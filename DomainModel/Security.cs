@@ -21,5 +21,10 @@ namespace DomainModel
                 return true;
             else return false;
         }
+        public static bool isErrorSessionActive(object session)
+        {
+            if (session != null) return true;
+            else return false;
+        }
     }
 }
