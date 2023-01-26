@@ -14,5 +14,6 @@ namespace DomainModel
             if (user != null && user.idProp != 0) return true;
             else return false;
         }
+
     }
 }

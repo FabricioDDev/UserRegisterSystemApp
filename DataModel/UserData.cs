@@ -93,5 +93,29 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
+
+        public User Login(User user)
+        {
+            try
+            {
+                data.SP("LoginUser");
+                data.Read();
+                if (data.readerProp.Read())
+                {
+                    user.idProp = (int)data.readerProp["UserId"];
+                    user.emailProp = (string)data.readerProp["Email"];
+                    user.ImageProfile = (string)data.readerProp["ImagenPerfil"];
+                    user.RoleType = new Role();
+                    user.RoleType.Id = (int)data.readerProp["RoleId"];
+                    user.RoleType.RoleName = (string)data.readerProp["RoleName"];
+                }
+                return user;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
     }
 }
