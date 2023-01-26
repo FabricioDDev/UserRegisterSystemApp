@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
-    static class Helper
+    public static class Helper
     {
+        
+        public static Func<string, int, int, bool> validate_LongText = (
+           texto, min, max
+           ) => texto.Length >= min && texto.Length <= max;
+
     }
 }
