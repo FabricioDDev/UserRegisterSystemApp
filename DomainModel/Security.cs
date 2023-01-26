@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
-    static class Security
+    public static class Security
     {
+        public static bool activeSession(object session)
+        {
+            User user = session != null ? (User)session : null;
+            if (user != null && user.idProp != 0) return true;
+            else return false;
+        }
     }
 }
