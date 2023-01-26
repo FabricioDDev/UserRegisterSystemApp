@@ -14,6 +14,12 @@ namespace DomainModel
             if (user != null && user.idProp != 0) return true;
             else return false;
         }
-
+        public static bool isAdmin(object session)
+        {
+            User user = session != null ? (User)session : null;
+            if (user != null && user.RoleType.Id == 2)
+                return true;
+            else return false;
+        }
     }
 }
