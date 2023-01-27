@@ -117,5 +117,24 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
+
+        public bool ExistUser(string Email, string UserName)
+        {
+            try
+            {
+                data.SP("ExistUser");
+                data.Read();
+                if (data.readerProp.Read())
+                {
+                    return (bool)data.readerProp["Match"];
+                }
+                else return false;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
     }
 }
