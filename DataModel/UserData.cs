@@ -123,6 +123,8 @@ namespace DataModel
             try
             {
                 data.SP("ExistUser");
+                data.Parameters("@Email", Email);
+                data.Parameters("@UserName", UserName);
                 data.Read();
                 if (data.readerProp.Read())
                 {
