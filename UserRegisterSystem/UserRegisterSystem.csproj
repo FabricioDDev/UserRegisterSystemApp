@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrmErrorPage.aspx" />
+    <Content Include="FrmLogIn.aspx" />
+    <Content Include="FrmSignIn.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\UserRegisterDB.sql" />
     <Content Include="Web.config" />
@@ -80,12 +82,34 @@
     <Compile Include="FrmErrorPage.aspx.designer.cs">
       <DependentUpon>FrmErrorPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FrmLogIn.aspx.cs">
+      <DependentUpon>FrmLogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmLogIn.aspx.designer.cs">
+      <DependentUpon>FrmLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSignIn.aspx.cs">
+      <DependentUpon>FrmSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmSignIn.aspx.designer.cs">
+      <DependentUpon>FrmSignIn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LogInUserMaster.Master.cs">
+      <DependentUpon>LogInUserMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogInUserMaster.Master.designer.cs">
+      <DependentUpon>LogInUserMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LogInUserMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
