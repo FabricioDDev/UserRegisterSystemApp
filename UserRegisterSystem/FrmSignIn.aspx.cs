@@ -19,6 +19,8 @@ namespace UserRegisterSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             //validaciones: todos los campos son requeridos. datos incorrectos. aceptar politicas. ya existe usuario. 
+            if (Security.isErrorSessionActive(Session["Error"]))
+                Response.Redirect("FrmErrorPage.aspx", false);
         }
 
         protected void BtnCreate_Click(object sender, EventArgs e)
