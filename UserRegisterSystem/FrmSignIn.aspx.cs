@@ -11,7 +11,7 @@ namespace UserRegisterSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //validaciones: todos los campos son requeridos. datos incorrectos. aceptar politicas. ya existe usuario. 
         }
     }
 }
