@@ -52,7 +52,7 @@ namespace DataModel
                 data.Parameters("@UserName", user.userNameProp);
                 data.Parameters("@Password", user.passwordProp);
                 data.Parameters("@ImagenPerfil", user.ImageProfile);
-                data.Parameters("@IdRol", user.RoleType.Id);
+                data.Parameters("@IdRole", user.RoleType.Id);
                 data.Execute();
             }
             catch(Exception ex) { throw ex; }
