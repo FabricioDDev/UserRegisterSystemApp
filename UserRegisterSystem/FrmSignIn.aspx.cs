@@ -16,11 +16,18 @@ namespace UserRegisterSystem
             userData = new UserData();
         }
         private UserData userData;
+        private List<TextBox> controlls = new List<TextBox>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //validaciones: todos los campos son requeridos. datos incorrectos. aceptar politicas. ya existe usuario. 
             if (Security.isErrorSessionActive(Session["Error"]))
                 Response.Redirect("FrmErrorPage.aspx", false);
+            chargeControlls();
+        }
+        private void chargeControlls()
+        {
+            controlls.Add(TxtEmail);
+            controlls.Add(TxtUserName);
+            controlls.Add(TxtPassword);
         }
 
         protected void BtnCreate_Click(object sender, EventArgs e)
@@ -28,14 +35,44 @@ namespace UserRegisterSystem
             User user = new User();
             try
             {
-                user.emailProp = TxtEmail.Text;
-                user.userNameProp = TxtUserName.Text;
-                user.passwordProp = TxtPassword.Text;
-                user.ImageProfile = "Vacio";
-                user.RoleType = new Role();
-                user.RoleType.Id = 1;
-                userData.insertUser(user);
+                if (Validating_TextBox())
+                {
+                    user.emailProp = TxtEmail.Text;
+                    user.userNameProp = TxtUserName.Text;
+                    user.passwordProp = TxtPassword.Text;
+                    user.ImageProfile = "Vacio";
+                    user.RoleType = new Role();
+                    user.RoleType.Id = 1;
+                    userData.insertUser(user);
+                }
+                
             }catch(Exception ex) { Session.Add("Error", ex.ToString()); }
+        }
+        //validaciones: todos los campos son requeridos. datos incorrectos. aceptar politicas. ya existe usuario. 
+        private bool Validating_TextBox()
+        {
+            bool Result = true;
+            foreach(TextBox txt in controlls)
+            {
+                if (!Result) return Result;
+                else if(txt.Text.Length == 0)
+                {
+                    Result = false;
+                    LblWarning.Text = "Todos los campos son requeridos";
+                }
+                else if(!Helper.validate_LongText(txt.Text, 5, 20))
+                {
+                    Result = false;
+                    LblWarning.Text = "Cantidad de caracteres incorrectos";
+                    txt.Text = "Incorrecto";
+                }   
+                else if (!CkbRead.Checked)
+                {
+                    Result = false;
+                    LblWarning.Text = "Debes aceptar los terminos y politicas de la empresa.";
+                }
+            }
+            return Result;
         }
     }
 }

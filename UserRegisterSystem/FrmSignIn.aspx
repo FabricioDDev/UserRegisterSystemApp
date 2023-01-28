@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <asp:Label ID="LblEmail" runat="server" Text="Your Email"></asp:Label>
-    <asp:TextBox ID="TxtEmail" runat="server"></asp:TextBox>
+    <asp:TextBox ID="TxtEmail"  TextMode="Email" runat="server"></asp:TextBox>
 
     <asp:Label ID="LblUserName" runat="server" Text="Your UserName"></asp:Label>
     <asp:TextBox ID="TxtUserName" runat="server"></asp:TextBox>
