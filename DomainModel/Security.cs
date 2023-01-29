@@ -26,5 +26,7 @@ namespace DomainModel
             if (session != null) return true;
             else return false;
         }
+
+        
     }
 }

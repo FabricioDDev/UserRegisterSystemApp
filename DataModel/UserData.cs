@@ -120,6 +120,7 @@ namespace DataModel
 
         public bool ExistUser(string Email, string UserName)
         {
+            int aux = 0;
             try
             {
                 data.SP("ExistUser");
@@ -128,8 +129,9 @@ namespace DataModel
                 data.Read();
                 if (data.readerProp.Read())
                 {
-                    return (bool)data.readerProp["Match"];
+                    aux = (int)data.readerProp["Match"];
                 }
+                if (aux != 0) return true;
                 else return false;
             }
             catch(Exception ex)

@@ -48,10 +48,11 @@ namespace UserRegisterSystem
                 
             }catch(Exception ex) { Session.Add("Error", ex.ToString()); }
         }
-        //validaciones: todos los campos son requeridos. datos incorrectos. aceptar politicas. ya existe usuario. 
+        //validaciones: ya existe usuario. 
         private bool Validating_TextBox()
         {
-            bool Result = true;
+            bool Result;
+            Result = !userData.ExistUser(TxtEmail.Text, TxtUserName.Text);
             foreach(TextBox txt in controlls)
             {
                 if (!Result) return Result;
