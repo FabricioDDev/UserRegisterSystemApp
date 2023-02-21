@@ -4,3 +4,9 @@ C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DB\obj\Debug\DB.csproj.
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DB\obj\Debug\DB.dll
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DB\obj\Debug\DB.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DB\bin\Debug\DB.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DB\bin\Debug\DB.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DB\obj\Debug\DB.csproj.AssemblyReference.cache
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DB\obj\Debug\DB.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DB\obj\Debug\DB.pdb

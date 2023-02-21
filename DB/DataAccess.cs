@@ -11,7 +11,7 @@ namespace DB
     {
         public DataAccess()
         {
-            connection = new SqlConnection("server=BRENDA-PC; database=UserRegister; integrated security=true");
+            connection = new SqlConnection("server=DESKTOP-J1JBL3C\\SQLEXPRESS; database=UserRegisterDB; integrated security=true");
             command = new SqlCommand();
         }
         private SqlConnection connection;

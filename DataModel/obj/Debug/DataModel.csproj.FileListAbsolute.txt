@@ -9,3 +9,14 @@ C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DataModel\obj\Debug\Dat
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DataModel\obj\Debug\DataModel.csproj.CopyComplete
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DataModel\obj\Debug\DataModel.dll
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DataModel\obj\Debug\DataModel.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\bin\Debug\DataModel.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\bin\Debug\DataModel.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\bin\Debug\DB.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\bin\Debug\DomainModel.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\bin\Debug\DB.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\bin\Debug\DomainModel.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\obj\Debug\DataModel.csproj.AssemblyReference.cache
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\obj\Debug\DataModel.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DataModel\obj\Debug\DataModel.pdb

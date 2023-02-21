@@ -4,3 +4,9 @@ C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DomainModel\obj\Debug\D
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DomainModel\obj\Debug\DomainModel.csproj.CoreCompileInputs.cache
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\brenda\Desktop\proyects\UserRegister_WebProyect\DomainModel\obj\Debug\DomainModel.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DomainModel\obj\Debug\DomainModel.csproj.AssemblyReference.cache
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DomainModel\obj\Debug\DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\DomainModel\obj\Debug\DomainModel.pdb

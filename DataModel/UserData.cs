@@ -47,12 +47,12 @@ namespace DataModel
         {
             try
             {
-                data.SP("InsertUser");
-                data.Parameters("@Email", user.emailProp);
-                data.Parameters("@UserName", user.userNameProp);
-                data.Parameters("@Password", user.passwordProp);
-                data.Parameters("@ImagenPerfil", user.ImageProfile);
-                data.Parameters("@IdRole", user.RoleType.Id);
+                data.Query("insert into UserTable values (@UEmail, @UName, @UPassword, @UImagenPerfil, @UIdRole)");
+                data.Parameters("@UEmail", user.emailProp);
+                data.Parameters("@UName", user.userNameProp);
+                data.Parameters("@UPassword", user.passwordProp);
+                data.Parameters("@UImagenPerfil", user.ImageProfile);
+                data.Parameters("@UIdRole", user.RoleType.Id);
                 data.Execute();
             }
             catch(Exception ex) { throw ex; }
@@ -129,7 +129,7 @@ namespace DataModel
                 data.Read();
                 if (data.readerProp.Read())
                 {
-                    aux = (int)data.readerProp["Match"];
+                    aux = (int)data.readerProp["Exist"];
                 }
                 if (aux != 0) return true;
                 else return false;

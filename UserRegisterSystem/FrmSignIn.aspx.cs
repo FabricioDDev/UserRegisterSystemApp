@@ -40,7 +40,7 @@ namespace UserRegisterSystem
                     user.emailProp = TxtEmail.Text;
                     user.userNameProp = TxtUserName.Text;
                     user.passwordProp = TxtPassword.Text;
-                    user.ImageProfile = "Vacio";
+                    user.ImageProfile = "sasasa";
                     user.RoleType = new Role();
                     user.RoleType.Id = 1;
                     userData.insertUser(user);
@@ -53,7 +53,8 @@ namespace UserRegisterSystem
         {
             bool Result;
             Result = !userData.ExistUser(TxtEmail.Text, TxtUserName.Text);
-            foreach(TextBox txt in controlls)
+            if (!Result) return Result;
+            foreach (TextBox txt in controlls)
             {
                 if (!Result) return Result;
                 else if(txt.Text.Length == 0)
