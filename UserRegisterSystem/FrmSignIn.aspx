@@ -15,6 +15,6 @@
 
     <asp:CheckBox ID="CkbRead" Text="Are you Agree the Politics?" runat="server" />
     <asp:Button ID="BtnCreate" OnClick="BtnCreate_Click" runat="server" Text="Create Now" />
-
+    <asp:LinkButton ID="LkbtnLogIn" OnClick="LkbtnLogIn_Click" runat="server">LogIn</asp:LinkButton>
     <asp:Label ID="LblWarning" runat="server" Text=""></asp:Label>
 </asp:Content>

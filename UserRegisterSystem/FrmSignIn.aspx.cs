@@ -90,5 +90,10 @@ namespace UserRegisterSystem
             }
 
         }
+
+        protected void LkbtnLogIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmLogIn.aspx", false);
+        }
     }
 }
