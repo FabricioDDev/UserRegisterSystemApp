@@ -11,7 +11,7 @@
 
     <asp:Label ID="LblPassword" runat="server" Text="YourPassword"></asp:Label>
     <asp:TextBox ID="TxtPassword" TextMode="Password" runat="server"></asp:TextBox>
-    <asp:Button ID="BtnViewPass" runat="server" Text="ViewPass" />
+    <asp:Button ID="BtnViewPass" OnClick="BtnViewPass_Click" runat="server" Text="ViewPass" />
 
     <asp:CheckBox ID="CkbRead" Text="Are you Agree the Politics?" runat="server" />
     <asp:Button ID="BtnCreate" OnClick="BtnCreate_Click" runat="server" Text="Create Now" />

@@ -48,7 +48,6 @@ namespace UserRegisterSystem
                 
             }catch(Exception ex) { Session.Add("Error", ex.ToString()); }
         }
-        //validaciones: ya existe usuario. 
         private bool Validating_TextBox()
         {
             bool Result;
@@ -75,6 +74,21 @@ namespace UserRegisterSystem
                 }
             }
             return Result;
+        }
+
+        protected void BtnViewPass_Click(object sender, EventArgs e)
+        {
+            if(TxtPassword.TextMode == TextBoxMode.Password)
+            {
+                BtnViewPass.Text = "View Pass";
+                TxtPassword.TextMode = TextBoxMode.SingleLine;
+            }
+            else if (TxtPassword.TextMode == TextBoxMode.SingleLine)
+            {
+                BtnViewPass.Text = "Ocult Pass";
+                TxtPassword.TextMode = TextBoxMode.Password;
+            }
+
         }
     }
 }
