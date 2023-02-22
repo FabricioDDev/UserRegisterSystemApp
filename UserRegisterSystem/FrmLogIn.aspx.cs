@@ -39,5 +39,10 @@ namespace UserRegisterSystem
             }
             catch (Exception ex) { Session.Add("Error", ex.ToString()); }
         }
+
+        protected void LkbtnSignIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmSignIn.aspx", false);
+        }
     }
 }

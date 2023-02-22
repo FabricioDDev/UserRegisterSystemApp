@@ -10,7 +10,7 @@
     <asp:TextBox ID="TxtPass" runat="server"></asp:TextBox>
 
     <asp:Button ID="BtnGo" OnClick="BtnGo_Click" runat="server" Text="Go" />
-    <asp:LinkButton ID="LkbtnSignIn" runat="server">Already have a account?</asp:LinkButton>
+    <asp:LinkButton ID="LkbtnSignIn" OnClick="LkbtnSignIn_Click" runat="server">Already have a account?</asp:LinkButton>
     <asp:LinkButton ID="LkbtnRecovery" runat="server">Lost your Password?</asp:LinkButton>
     <asp:Label ID="LblWarning" Visible="false" runat="server" Text=""></asp:Label>
 
