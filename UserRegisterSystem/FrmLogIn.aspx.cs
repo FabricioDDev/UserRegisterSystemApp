@@ -44,5 +44,10 @@ namespace UserRegisterSystem
         {
             Response.Redirect("FrmSignIn.aspx", false);
         }
+
+        protected void LkbtnRecovery_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmRecoveryUser.aspx", false);
+        }
     }
 }
