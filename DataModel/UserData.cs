@@ -94,14 +94,19 @@ namespace DataModel
             finally { data.Close(); }
         }
 
-        public User Login(User user)
+        public User Login(string userName, string userPass)
         {
             try
             {
-                data.SP("LoginUser");
+                User user = new User();
+                data.SP("LogIn");
+                data.Parameters("@UserName", userName);
+                data.Parameters("Pass", userPass);
                 data.Read();
                 if (data.readerProp.Read())
                 {
+                    user.userNameProp = userName;
+                    user.passwordProp = userPass;
                     user.idProp = (int)data.readerProp["UserId"];
                     user.emailProp = (string)data.readerProp["Email"];
                     user.ImageProfile = (string)data.readerProp["ImagenPerfil"];

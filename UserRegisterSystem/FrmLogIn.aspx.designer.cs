@@ -15,22 +15,22 @@ namespace UserRegisterSystem
     {
 
         /// <summary>
-        /// Control LblEmail_UserName.
+        /// Control LblUserName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblEmail_UserName;
+        protected global::System.Web.UI.WebControls.Label LblUserName;
 
         /// <summary>
-        /// Control TxtEmail_UserName.
+        /// Control TxtUserName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtEmail_UserName;
+        protected global::System.Web.UI.WebControls.TextBox TxtUserName;
 
         /// <summary>
         /// Control LblPass.
