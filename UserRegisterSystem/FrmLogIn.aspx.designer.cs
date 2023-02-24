@@ -15,6 +15,24 @@ namespace UserRegisterSystem
     {
 
         /// <summary>
+        /// Control LkbtnSignIn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LkbtnSignIn;
+
+        /// <summary>
+        /// Control LblWarning.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblWarning;
+
+        /// <summary>
         /// Control LblUserName.
         /// </summary>
         /// <remarks>
@@ -60,15 +78,6 @@ namespace UserRegisterSystem
         protected global::System.Web.UI.WebControls.Button BtnGo;
 
         /// <summary>
-        /// Control LkbtnSignIn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LkbtnSignIn;
-
-        /// <summary>
         /// Control LkbtnRecovery.
         /// </summary>
         /// <remarks>
@@ -76,14 +85,5 @@ namespace UserRegisterSystem
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LkbtnRecovery;
-
-        /// <summary>
-        /// Control LblWarning.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblWarning;
     }
 }
