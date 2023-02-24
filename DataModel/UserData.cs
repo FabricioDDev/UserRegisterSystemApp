@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DomainModel;
 using DB;
+using System.ComponentModel.Design;
 
 namespace DataModel
 {
@@ -42,7 +43,6 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
-
         public void insertUser(User user)
         {
             try
@@ -78,7 +78,7 @@ namespace DataModel
             finally { data.Close(); }
         }
 
-        public void recoveryUserPass(string newPass, string Email)
+        public void RecoveryUserPass(string newPass, string Email)
         {
             try
             {
@@ -140,6 +140,27 @@ namespace DataModel
                 else return false;
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
+
+        public string searchEmail(string user)
+        {
+            string email = "";
+            try
+            {
+                data.Query("select Email from UserTable where UserName = @user");
+                data.Parameters("@user", user);
+                data.Read();
+                if (data.readerProp.Read())
+                {
+                    email = (string)data.readerProp["Email"];
+                }
+                return email;
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

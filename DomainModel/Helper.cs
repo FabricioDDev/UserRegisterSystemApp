@@ -12,6 +12,11 @@ namespace DomainModel
         public static Func<string, int, int, bool> validate_LongText = (
            texto, min, max
            ) => texto.Length >= min && texto.Length <= max;
-
+        public static String generateRandomCode()
+        {
+            Random rdm = new Random();
+            return rdm.Next(1000, 9000).ToString();
+        }
+        
     }
 }
