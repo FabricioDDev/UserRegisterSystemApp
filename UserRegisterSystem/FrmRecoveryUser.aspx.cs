@@ -50,10 +50,8 @@ namespace UserRegisterSystem
                         break;
                     case 2:
                         userData.RecoveryUserPass(TxtForm.Text, Email);
-                        LblForm.Text = "Genial, su contraseña fue actualizada Correctamente!!.";
-                        BtnConfirm.Visible = false;
-                        TxtForm.Visible = false;
-                        LblWarning.Visible = false;
+                        count++;
+                        controlls();
                         break;
                     default:
                         break; 
@@ -63,6 +61,7 @@ namespace UserRegisterSystem
         }
         private void controlls()
         {
+            TxtForm.Text = "";
             if (count == 0)
             {
                 LblForm.Text = "escriba su usuario";
@@ -74,6 +73,13 @@ namespace UserRegisterSystem
             else if (count == 2)
             {
                 LblForm.Text = "escriba su nueva contraseña";
+            }
+            else if(count == 3)
+            {
+                LblForm.Text = "Genial, su contraseña fue actualizada Correctamente!!.";
+                BtnConfirm.Visible = false;
+                TxtForm.Visible = false;
+                LblWarning.Visible = false;
             }
         }
         protected void BtnExit_Click(object sender, EventArgs e)

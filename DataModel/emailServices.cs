@@ -18,10 +18,10 @@ namespace DataModel
         public emailServices()
         {
             server = new SmtpClient();
-            server.Credentials = new NetworkCredential("de64205f39657e", "daee0a760f4b33");
+            server.Credentials = new NetworkCredential("andapashabobo30@gmail.com", "epeqshbibaieqart");
             server.EnableSsl= true;
-            server.Port = 2525;
-            server.Host= "sandbox.smtp.mailtrap.io";
+            server.Port = 587;
+            server.Host= "smtp.gmail.com";
         }
         public void createEmail(string Address, string Subject, string Message)
         {
