@@ -36,7 +36,7 @@ namespace UserRegisterSystem
                         Email = userData.searchEmail(TxtForm.Text);
                         if (Email != null)
                         {
-                            emailServices.createEmail(Email, "Recovery Password", "your code is : " + Code);
+                            emailServices.createEmail(Email, "Recovery Password", "your code is :  " + Code);
                             emailServices.sendEmail();
                             count++;
                             controlls();
