@@ -30,31 +30,33 @@ namespace UserRegisterSystem
             emailServices emailServices = new emailServices();
             try
             {
-                if (count == 0)
+                switch (count)
                 {
-                    Email = userData.searchEmail(TxtForm.Text);
-                    if (Email != null)
-                    {
-                        emailServices.createEmail(Email, "Recovery Password", "your code is : " + Code);
-                        emailServices.sendEmail();
-                        count++;
-                        controlls();
-                    }
-                    else { LblWarning.Visible = true; LblWarning.Text = "Usuario no encontrado!."; }
-                }
-                else if (count == 1)
-                {
-                    if (TxtForm.Text == Code)
-                    { count++; controlls(); }
-                    else { LblWarning.Visible = true; LblWarning.Text = "Codigo incorrecto, vuelva a intentarlo."; }
-                }
-                else if (count == 2)
-                {
-                    userData.RecoveryUserPass(TxtForm.Text, Email);
-                    LblForm.Text = "Genial, su contraseña fue actualizada Correctamente!!.";
-                    BtnConfirm.Visible = false;
-                    TxtForm.Visible = false;
-                    LblWarning.Visible = false;
+                    case 0:
+                        Email = userData.searchEmail(TxtForm.Text);
+                        if (Email != null)
+                        {
+                            emailServices.createEmail(Email, "Recovery Password", "your code is : " + Code);
+                            emailServices.sendEmail();
+                            count++;
+                            controlls();
+                        }
+                        else { LblWarning.Visible = true; LblWarning.Text = "Usuario no encontrado!."; }
+                        break;
+                    case 1:
+                        if (TxtForm.Text == Code)
+                        { count++; controlls(); }
+                        else { LblWarning.Visible = true; LblWarning.Text = "Codigo incorrecto, vuelva a intentarlo."; }
+                        break;
+                    case 2:
+                        userData.RecoveryUserPass(TxtForm.Text, Email);
+                        LblForm.Text = "Genial, su contraseña fue actualizada Correctamente!!.";
+                        BtnConfirm.Visible = false;
+                        TxtForm.Visible = false;
+                        LblWarning.Visible = false;
+                        break;
+                    default:
+                        break; 
                 }
             }
             catch (Exception ex) { Session.Add("Error", ex.ToString()); }
@@ -74,7 +76,6 @@ namespace UserRegisterSystem
                 LblForm.Text = "escriba su nueva contraseña";
             }
         }
-
         protected void BtnExit_Click(object sender, EventArgs e)
         {
             Response.Redirect("FrmLogIn.aspx", false);
