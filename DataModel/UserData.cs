@@ -19,7 +19,7 @@ namespace DataModel
             List<User> list = new List<User>();
             try
             {
-                data.SP("UserList");
+                data.Query("select U.Id as UserId, Email, UserName, Password, ImagenPerfil, R.Id as RoleId, RoleName from UserTable U, RoleTable R where R.Id = U.IdRole ");
                 data.Read();
                 while (data.readerProp.Read())
                 {
@@ -98,13 +98,13 @@ namespace DataModel
         {
             try
             {
-                User user = new User();
                 data.SP("LogIn");
                 data.Parameters("@UserName", userName);
-                data.Parameters("Pass", userPass);
+                data.Parameters("@Pass", userPass);
                 data.Read();
                 if (data.readerProp.Read())
                 {
+                    User user = new User();
                     user.userNameProp = userName;
                     user.passwordProp = userPass;
                     user.idProp = (int)data.readerProp["UserId"];
@@ -113,8 +113,9 @@ namespace DataModel
                     user.RoleType = new Role();
                     user.RoleType.Id = (int)data.readerProp["RoleId"];
                     user.RoleType.RoleName = (string)data.readerProp["RoleName"];
+                    return user;
                 }
-                return user;
+                return null;
             }
             catch(Exception ex)
             {

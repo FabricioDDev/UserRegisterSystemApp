@@ -44,6 +44,8 @@ namespace UserRegisterSystem
                     user.RoleType = new Role();
                     user.RoleType.Id = 1;
                     userData.insertUser(user);
+                    Session.Add("userActive", user);
+                    Response.Redirect("FrmDashBoard.aspx", false);
                 }
                 
             }catch(Exception ex) { Session.Add("Error", ex.ToString()); }
@@ -61,7 +63,7 @@ namespace UserRegisterSystem
                     Result = false;
                     LblWarning.Text = "Todos los campos son requeridos";
                 }
-                else if(!Helper.validate_LongText(txt.Text, 5, 20))
+                else if(!Helper.validate_LongText(txt.Text, 5, 30))
                 {
                     Result = false;
                     LblWarning.Text = "Cantidad de caracteres incorrectos";

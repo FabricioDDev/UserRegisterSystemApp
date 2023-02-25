@@ -30,6 +30,7 @@ namespace UserRegisterSystem
                 if (user != null)
                 {
                     Session.Add("UserActive", user);
+                    Response.Redirect("FrmDashBoard.aspx", false);
                 }
                 else
                 { 
@@ -49,5 +50,7 @@ namespace UserRegisterSystem
         {
             Response.Redirect("FrmRecoveryUser.aspx", false);
         }
+
+       
     }
 }
