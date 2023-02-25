@@ -23,7 +23,7 @@
         </div>
         <div class="mb-3" style="width:50%;">
             <asp:Label ID="LblPass" CssClass="form-label" runat="server" Text="Your Pass"></asp:Label>
-            <asp:TextBox ID="TxtPass" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TxtPass" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
         </div>
         <div class="mb-3 d-flex justify-content-center" style="width:50%;">
             <asp:Button ID="BtnGo" CssClass="btn btn-primary btn-lg" OnClick="BtnGo_Click" runat="server" Text="Go" />
