@@ -27,6 +27,7 @@ namespace UserRegisterSystem
 
                 userActive = (User)Session["userActive"];
                 
+
                 LblWelcome.Text = "Bienvenido " + userActive.userNameProp + "!!";
                 LblUserName.Text = userActive.userNameProp;
                 ImgProfile.ImageUrl = "~/Images/Profile/Profile-" + userActive.idProp.ToString() + ".jpg";
