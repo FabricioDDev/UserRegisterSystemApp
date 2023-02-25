@@ -70,6 +70,7 @@
     <Content Include="FrmDashBoard.aspx" />
     <Content Include="FrmErrorPage.aspx" />
     <Content Include="FrmLogIn.aspx" />
+    <Content Include="FrmProfileConfiguration.aspx" />
     <Content Include="FrmRecoveryUser.aspx" />
     <Content Include="FrmSignIn.aspx" />
     <Content Include="Global.asax" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="FrmLogIn.aspx.designer.cs">
       <DependentUpon>FrmLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfileConfiguration.aspx.cs">
+      <DependentUpon>FrmProfileConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmProfileConfiguration.aspx.designer.cs">
+      <DependentUpon>FrmProfileConfiguration.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmRecoveryUser.aspx.cs">
       <DependentUpon>FrmRecoveryUser.aspx</DependentUpon>

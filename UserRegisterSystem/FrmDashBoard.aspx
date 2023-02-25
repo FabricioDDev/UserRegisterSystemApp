@@ -10,10 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Image ID="ImgProfile" runat="server" />
+            <asp:Image ID="ImgProfile" ImageUrl="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" runat="server" />
+            
             <asp:Label ID="LblUserName" runat="server" Text=""></asp:Label>
             <h1>DashBoard</h1>
-            <asp:Label ID="LblWelcome" runat="server" Text=""></asp:Label>
+            <asp:Label ID="LblWelcome"  runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>
