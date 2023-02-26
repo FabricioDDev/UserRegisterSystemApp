@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.EnterpriseServices;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,11 +27,18 @@ namespace UserRegisterSystem
                     Response.Redirect("FrmErrorPage.aspx", false);
 
                 userActive = (User)Session["userActive"];
-                
+
 
                 LblWelcome.Text = "Bienvenido " + userActive.userNameProp + "!!";
                 LblUserName.Text = userActive.userNameProp;
-                ImgProfile.ImageUrl = "~/Images/Profile/Profile-" + userActive.idProp.ToString() + ".jpg";
+                string Rute = @"C:\Users\miaqu\OneDrive\Escritorio\Fabri\Proyects\Server\UserRegisterSystem\Pictures\Profile-" + userActive.idProp + ".jpg";
+                
+                if(File.Exists(@MapPath("~/Pictures/Profile-"+ userActive.idProp.ToString()+".jpg")))
+                  ImgProfile.ImageUrl = "~/Pictures/Profile-" + userActive.idProp.ToString() + ".jpg";
+                else
+                ImgProfile.ImageUrl = "~/Pictures/Default.jpg";
+                
+
             }
             catch (Exception ex) { Session.Add("Error", ex.ToString()); }
         }
