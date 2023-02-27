@@ -19,7 +19,7 @@ namespace DataModel
             List<User> list = new List<User>();
             try
             {
-                data.Query("select U.Id as UserId, Email, UserName, Password, ImagenPerfil, R.Id as RoleId, RoleName from UserTable U, RoleTable R where R.Id = U.IdRole ");
+                data.Query("select U.Id as UserId, Email, UserName, Password, R.Id as RoleId, RoleName from UserTable U, RoleTable R where R.Id = U.IdRole ");
                 data.Read();
                 while (data.readerProp.Read())
                 {
@@ -27,7 +27,6 @@ namespace DataModel
                     Aux.idProp = (int)data.readerProp["UserId"];
                     Aux.emailProp = (string)data.readerProp["Email"];
                     Aux.userNameProp = (string)data.readerProp["UserName"];
-                    Aux.ImageProfile = (string)data.readerProp["ImagenPerfil"];
                     Aux.passwordProp = (string)data.readerProp["Password"];
                     Aux.RoleType = new Role();
                     Aux.RoleType.Id = (int)data.readerProp["RoleId"];
@@ -47,11 +46,10 @@ namespace DataModel
         {
             try
             {
-                data.Query("insert into UserTable values (@UEmail, @UName, @UPassword, @UImagenPerfil, @UIdRole)");
+                data.Query("insert into UserTable values (@UEmail, @UName, @UPassword, @UIdRole)");
                 data.Parameters("@UEmail", user.emailProp);
                 data.Parameters("@UName", user.userNameProp);
                 data.Parameters("@UPassword", user.passwordProp);
-                data.Parameters("@UImagenPerfil", user.ImageProfile);
                 data.Parameters("@UIdRole", user.RoleType.Id);
                 data.Execute();
             }
@@ -67,7 +65,6 @@ namespace DataModel
                 data.Parameters("@Email", user.emailProp);
                 data.Parameters("@UserName", user.userNameProp);
                 data.Parameters("@Password", user.passwordProp);
-                data.Parameters("@ImagenPerfil", user.ImageProfile);
                 data.Parameters("@IdRole", user.RoleType.Id);
                 data.Execute();
             }
@@ -109,7 +106,6 @@ namespace DataModel
                     user.passwordProp = userPass;
                     user.idProp = (int)data.readerProp["UserId"];
                     user.emailProp = (string)data.readerProp["Email"];
-                    user.ImageProfile = (string)data.readerProp["ImagenPerfil"];
                     user.RoleType = new Role();
                     user.RoleType.Id = (int)data.readerProp["RoleId"];
                     user.RoleType.RoleName = (string)data.readerProp["RoleName"];

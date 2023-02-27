@@ -13,10 +13,6 @@ namespace UserRegisterSystem
 {
     public partial class FrmDashBoard : System.Web.UI.Page
     {
-        public FrmDashBoard()
-        {
-            
-        }
         private User userActive;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,6 +41,12 @@ namespace UserRegisterSystem
                 ImgProfile.ImageUrl = "~/Pictures/Profile-" + userActive.idProp.ToString() + ".jpg";
             else
                 ImgProfile.ImageUrl = "~/Pictures/Default.jpg";
+        }
+
+        protected void BtnSignOut_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("FrmLogIn.aspx", false);
         }
     }
 }

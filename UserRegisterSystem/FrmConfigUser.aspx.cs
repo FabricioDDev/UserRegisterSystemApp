@@ -44,7 +44,7 @@ namespace UserRegisterSystem
             userActive.emailProp= TxtEmail.Text;
             userActive.userNameProp = TxtUserName.Text;
             userActive.passwordProp = TxtPassword.Text;
-            userData.insertUser(userActive);
+            userData.updateUser(userActive);
 
             string Rute = MapPath("~/Pictures/Profile-" + userActive.idProp.ToString() + ".jpg");
             if (File.Exists(@Rute))

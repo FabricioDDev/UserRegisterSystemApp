@@ -40,7 +40,6 @@ namespace UserRegisterSystem
                     user.emailProp = TxtEmail.Text;
                     user.userNameProp = TxtUserName.Text;
                     user.passwordProp = TxtPassword.Text;
-                    user.ImageProfile = "sasasa";
                     user.RoleType = new Role();
                     user.RoleType.Id = 1;
                     userData.insertUser(user);

@@ -33,7 +33,6 @@ namespace DomainModel
             get { return Password; }
             set { Password = value; }
         }
-        public string ImageProfile { get; set; }
         public Role RoleType { get; set; }
     }
 }

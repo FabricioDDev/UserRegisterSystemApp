@@ -17,6 +17,7 @@
             
             <h1>DashBoard</h1>
             <asp:Label ID="LblWelcome"  runat="server" Text=""></asp:Label>
+            <asp:Button ID="BtnSignOut" OnClick="BtnSignOut_Click" runat="server" Text="SignOut" />
         </div>
     </form>
 </body>
