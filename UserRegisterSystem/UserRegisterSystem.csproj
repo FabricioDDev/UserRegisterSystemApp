@@ -76,7 +76,6 @@
     <Content Include="FrmSignIn.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Pictures\Default.jpg" />
-    <Content Include="Pictures\Profile-1009.jpg" />
     <Content Include="Scripts\UserRegisterDB.sql" />
     <Content Include="Web.config" />
   </ItemGroup>

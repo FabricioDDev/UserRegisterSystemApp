@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DataModel;
 
 namespace UserRegisterSystem
 {
@@ -36,6 +37,25 @@ namespace UserRegisterSystem
                 ImgProfile.ImageUrl = "~/Pictures/Profile-" + userActive.idProp.ToString() + ".jpg";
             else
                 ImgProfile.ImageUrl = "~/Pictures/Default.jpg";
+        }
+
+        protected void BtnSave_Click(object sender, EventArgs e)
+        {
+            UserData userData = new UserData();
+            userActive.emailProp= TxtEmail.Text;
+            userActive.userNameProp = TxtUserName.Text;
+            userActive.passwordProp = TxtPassword.Text;
+            userData.insertUser(userActive);
+
+            string Rute = MapPath("~/Pictures/Profile-" + userActive.idProp.ToString() + ".jpg");
+            if (File.Exists(@Rute))
+            {
+                File.Delete(@Rute);
+                TxtImage.PostedFile.SaveAs(Rute);
+            }
+            else TxtImage.PostedFile.SaveAs(Rute);
+
+            chargeControlls();
         }
     }
 }

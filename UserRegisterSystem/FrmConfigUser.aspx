@@ -24,7 +24,7 @@
             <asp:Image ID="ImgProfile" runat="server" />
 
             <asp:Button ID="BtnGoToDashBoard" runat="server" Text="GoToDashBoard" />
-            <asp:Button ID="BtnSave" runat="server" Text="Save" />
+            <asp:Button ID="BtnSave" OnClick="BtnSave_Click" runat="server" Text="Save" />
             <asp:Label ID="LblWarning" runat="server" Text=""></asp:Label>
         </div>
     </form>
