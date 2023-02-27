@@ -38,7 +38,6 @@ namespace UserRegisterSystem
             else
                 ImgProfile.ImageUrl = "~/Pictures/Default.jpg";
         }
-
         protected void BtnSave_Click(object sender, EventArgs e)
         {
             UserData userData = new UserData();
@@ -56,6 +55,11 @@ namespace UserRegisterSystem
             else TxtImage.PostedFile.SaveAs(Rute);
 
             chargeControlls();
+        }
+
+        protected void BtnGoToDashBoard_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmDashBoard.aspx");
         }
     }
 }
