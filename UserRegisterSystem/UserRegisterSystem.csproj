@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FrmConfigUser.aspx" />
     <Content Include="FrmDashBoard.aspx" />
     <Content Include="FrmErrorPage.aspx" />
     <Content Include="FrmLogIn.aspx" />
@@ -80,6 +81,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConfigUser.aspx.cs">
+      <DependentUpon>FrmConfigUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmConfigUser.aspx.designer.cs">
+      <DependentUpon>FrmConfigUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrmDashBoard.aspx.cs">
       <DependentUpon>FrmDashBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
