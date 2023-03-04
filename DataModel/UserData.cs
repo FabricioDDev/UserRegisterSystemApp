@@ -154,8 +154,9 @@ namespace DataModel
                 if (data.readerProp.Read())
                 {
                     email = (string)data.readerProp["Email"];
+                    return email;
                 }
-                return email;
+                return email = null;
             }
             catch (Exception ex)
             {

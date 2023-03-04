@@ -23,7 +23,6 @@ namespace UserRegisterSystem
             if (Security.isErrorSessionActive(Session["Error"]))
                 Response.Redirect("FrmErrorPage.aspx", false);
         }
-
         protected void BtnConfirm_Click(object sender, EventArgs e)
         {
             UserData userData = new UserData();
