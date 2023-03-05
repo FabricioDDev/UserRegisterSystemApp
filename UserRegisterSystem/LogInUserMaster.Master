@@ -1,5 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LogInUserMaster.master.cs" Inherits="UserRegisterSystem.LogInUserMaster" %>
-
+<!--
+    Here we have the main master, from the frontside.
+    how you can see, here we have the common mold for the LogIn and SignIn Page.
+    here we put the common design, links and scripts to librarys css, etc.
+    -->
 <!DOCTYPE html>
 
 <html>

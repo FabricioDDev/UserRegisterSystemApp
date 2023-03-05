@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LogInUserMaster.Master" AutoEventWireup="true" CodeBehind="FrmLogIn.aspx.cs" Inherits="UserRegisterSystem.FrmLogIn" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <!-- here we have the LogIn page from the frontend side.
+         we are using a master for the design that share with the SignIn Page. 
+        basically the function to this Page is have a frontend with asp.net controlls, for logIn Users from the Backend Page.-->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LogInUserMaster.Master" AutoEventWireup="true" CodeBehind="FrmRecoveryUser.aspx.cs" Inherits="UserRegisterSystem.FrmRecoveryUser" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <!--here we have the recovery user page from the frontend.
+        here the user could recovery his password. we tried to create a dinamic page, so we use the same controlls for
+        search the emailuser, write the code, and confirm the code. -->
     <style>
         *{
             margin:5px;

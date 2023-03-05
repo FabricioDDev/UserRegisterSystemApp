@@ -13,18 +13,24 @@ namespace UserRegisterSystem
 {
     public partial class FrmRecoveryUser : System.Web.UI.Page
     {
+        //Atributes
         private static string Code = Helper.generateRandomCode();
         private static int count = 0;
         private static string Email;
+
+        //Events
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack) controlls();
-
+            //Validates
             if (Security.isErrorSessionActive(Session["Error"]))
                 Response.Redirect("FrmErrorPage.aspx", false);
+            //charge controlls
+            if (!IsPostBack) controlls();
         }
         protected void BtnConfirm_Click(object sender, EventArgs e)
         {
+            //here we implement a switch for all the case, since Search the
+            //UserEmail with the Name, Send a Code to his Name, and Confirm the code.
             UserData userData = new UserData();
             emailServices emailServices = new emailServices();
             try
@@ -58,8 +64,13 @@ namespace UserRegisterSystem
             }
             catch (Exception ex) { Session.Add("Error", ex.ToString()); }
         }
+        protected void BtnExit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmLogIn.aspx", false);
+        }
         private void controlls()
         {
+            //here we use only one label from the differents cases.
             TxtForm.Text = "";
             if (count == 0)
             {
@@ -73,17 +84,13 @@ namespace UserRegisterSystem
             {
                 LblForm.Text = "escriba su nueva contraseña";
             }
-            else if(count == 3)
+            else if (count == 3)
             {
                 LblForm.Text = "Genial, su contraseña fue actualizada Correctamente!!.";
                 BtnConfirm.Visible = false;
                 TxtForm.Visible = false;
                 LblWarning.Visible = false;
             }
-        }
-        protected void BtnExit_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("FrmLogIn.aspx", false);
         }
     }
 }

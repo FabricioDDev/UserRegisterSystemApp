@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LogInUserMaster.Master" AutoEventWireup="true" CodeBehind="FrmSignIn.aspx.cs" Inherits="UserRegisterSystem.FrmSignIn" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <!-- here we have the SignIn page from the frontend side.
+         we are using a master for the design that share with the LogIn Page. 
+        basically the function to this Page is have a frontend with asp.net controlls, for create Users from the Backend Page.-->
     <style>
         .form-check-input{
             background-color:transparent;

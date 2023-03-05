@@ -42,15 +42,6 @@ namespace UserRegisterSystem
         protected global::System.Web.UI.WebControls.Label LblUserName;
 
         /// <summary>
-        /// Control LblWelcome.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblWelcome;
-
-        /// <summary>
         /// Control BtnSignOut.
         /// </summary>
         /// <remarks>
@@ -58,5 +49,14 @@ namespace UserRegisterSystem
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnSignOut;
+
+        /// <summary>
+        /// Control LblWelcome.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblWelcome;
     }
 }

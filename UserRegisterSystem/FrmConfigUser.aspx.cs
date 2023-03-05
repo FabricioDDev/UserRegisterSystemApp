@@ -12,14 +12,18 @@ namespace UserRegisterSystem
 {
     public partial class FrmConfigUser : System.Web.UI.Page
     {
+        //atributes
         private User userActive;
         private List<TextBox> controlls = new List<TextBox>();
+        //events
         protected void Page_Load(object sender, EventArgs e)
         {
+            //validates
                 if (Security.isErrorSessionActive(Session["Error"]))
                     Response.Redirect("FrmErrorPage.aspx", false);
                 if (!Security.activeSession(Session["userActive"]))
                     Response.Redirect("FrmErrorPage.aspx", false);
+
                 userActive = (User)Session["userActive"];
                 if (!IsPostBack)
                     chargeControlls();
@@ -33,6 +37,7 @@ namespace UserRegisterSystem
         }
         public void chargeControlls()
         {
+            //Charge the controlls with Information
             TxtEmail.Text = userActive.emailProp;
             TxtUserName.Text= userActive.userNameProp;
             TxtPassword.Text = userActive.passwordProp;
@@ -48,7 +53,7 @@ namespace UserRegisterSystem
         }
         protected void BtnSave_Click(object sender, EventArgs e)
         {
-
+            //validate the controlls entry, and update the user
             try
             {
                 UserData userData = new UserData();
@@ -58,6 +63,7 @@ namespace UserRegisterSystem
                     userActive.userNameProp = TxtUserName.Text;
                     userActive.passwordProp = TxtPassword.Text;
                     userData.updateUser(userActive);
+
                     string Rute = MapPath("~/Pictures/Profile-" + userActive.idProp.ToString() + ".jpg");
                     if (File.Exists(@Rute))
                     {
@@ -69,6 +75,8 @@ namespace UserRegisterSystem
                     chargeControlls();
                 }
                 else { LblWarning.Visible = true; }
+
+                
             }
             catch (Exception ex) { Session.Add("Error", ex.ToString()); }
         }

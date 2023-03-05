@@ -11,14 +11,12 @@ namespace UserRegisterSystem
 {
     public partial class FrmLogIn : System.Web.UI.Page
     {
+        //Events
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
+            //Validating
                 if (Security.isErrorSessionActive(Session["Error"]))
                     Response.Redirect("FrmErrorPage.aspx", false);
-            }
-            catch (Exception ex) { Session.Add("Error", ex.ToString()); }
         }
 
         protected void BtnGo_Click(object sender, EventArgs e)
@@ -26,6 +24,7 @@ namespace UserRegisterSystem
             UserData userData = new UserData();
             try
             {
+                //Using a Method from UserData class fro LogIn the User.
                 User user = userData.Login(TxtUserName.Text, TxtPass.Text);
                 if (user != null)
                 {

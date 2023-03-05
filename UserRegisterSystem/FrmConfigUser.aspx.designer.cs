@@ -24,6 +24,15 @@ namespace UserRegisterSystem
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control BtnGoToDashBoard.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnGoToDashBoard;
+
+        /// <summary>
         /// Control LblEmail.
         /// </summary>
         /// <remarks>
@@ -103,15 +112,6 @@ namespace UserRegisterSystem
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImgProfile;
-
-        /// <summary>
-        /// Control BtnGoToDashBoard.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnGoToDashBoard;
 
         /// <summary>
         /// Control BtnSave.
