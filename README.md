@@ -1,4 +1,5 @@
 <h1>User Register System</h1>
+<p>It is only a practice proyect, created by me! i find implement the new knowlodge, like send a email for recovery your Password account</p>
 <h2>Review</h2>
 <p>Sign Up Page</p>
 <img src="https://i.postimg.cc/HsfP6khp/SignUp.png" width="400"/>
@@ -16,5 +17,7 @@
 <p>Firstly you need clone the Proyect using GIT, with the next commands:</p>
 <p>git clone UrlRepository</p>
 <p>After that, you need Create the DataBase, you only need open the archive in the next path:</p>
-<p></p>
-<p></p>
+<p>https://github.com/FabricioDDev/UserRegisterSystemApp/tree/master/UserRegisterSystem/Scripts</p>
+<p>also you need change the server name in the DataAccess Class.</p>
+
+
