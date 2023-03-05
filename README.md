@@ -9,7 +9,12 @@
 <p>User Configuration</p>
 <img src="https://i.postimg.cc/vBNpML3n/User-Config.png" width="400"/>
 <h3>For Developers:</h3>
-<h4>Stack Used:</h4>
-
-<h5></h5>
-<h6></h6>
+<h4>Stack Used: C#, .Net Framework, SqlServer, Git, Css/Bootstrap, Html.</h4>
+<h5>Proyect Description:</h5>
+<p>The Proyect was Build using the OOP Paradigm, and layered programming from the code,  Also related queries.</p>
+<h6>How Implement the Proyect</h6>
+<p>Firstly you need clone the Proyect using GIT, with the next commands:</p>
+<p>git clone UrlRepository</p>
+<p>After that, you need Create the DataBase, you only need open the archive in the next path:</p>
+<p></p>
+<p></p>
